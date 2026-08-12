@@ -1,4 +1,11 @@
-- name: Android Build
+- name: godot-android-builder
   # You may pin to the exact commit or the version.
-  # uses: vgaidarji/android-github-actions-build@0888eff41ad409a802aa4ccd7790a91891da9056
-  uses: vgaidarji/android-github-actions-build@v1.0.1
+  # uses: croconut/godot-multi-builder@76d958c04895a6a1b66c6b235b10eecf064ad897
+  uses: croconut/godot-multi-builder@v1
+  with:
+    # Comma separated build names, as defined in your export_presets.cfg file.
+    names: 
+    # Where your godot.project file is located, relative to your repo's top level.
+    path-to-game: # optional, default is ./
+    # Whether to export in debug-mode
+    debug-mode: # optional, default is true
