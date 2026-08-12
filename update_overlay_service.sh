@@ -1,0 +1,3 @@
+#!/bin/bash
+sed -i 's/import androidx.compose.ui.Modifier/import androidx.compose.ui.Modifier\nimport androidx.compose.foundation.draganddrop.dragAndDropTarget\nimport androidx.compose.ui.draganddrop.DragAndDropTarget\nimport androidx.compose.ui.draganddrop.DragAndDropEvent\nimport androidx.compose.ui.draganddrop.toAndroidDragEvent\nimport android.content.ClipData\nimport android.content.ClipDescription\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport kotlinx.coroutines.launch\nimport androidx.compose.ui.graphics.Color\nimport androidx.lifecycle.lifecycleScope/g' /app/applet/app/src/main/java/com/example/overlay/OverlayService.kt
+

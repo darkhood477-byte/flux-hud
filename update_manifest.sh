@@ -1,0 +1,2 @@
+#!/bin/bash
+sed -i 's/    <\/application>/        <provider\n            android:name="androidx.core.content.FileProvider"\n            android:authorities="${applicationId}.fileprovider"\n            android:exported="false"\n            android:grantUriPermissions="true">\n            <meta-data\n                android:name="android.support.FILE_PROVIDER_PATHS"\n                android:resource="@xml\/file_paths" \/>\n        <\/provider>\n    <\/application>/g' /app/applet/app/src/main/AndroidManifest.xml

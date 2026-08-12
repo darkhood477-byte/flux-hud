@@ -1,0 +1,6 @@
+{
+  "name": "Flux",
+  "description": "A transparent Head-Up Display (HUD) overlay and utility application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
