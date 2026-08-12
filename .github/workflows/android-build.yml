@@ -25,10 +25,16 @@ jobs:
         with:
           gradle-version: '9.6.1'
 
-      - name: Generate Gradle Wrapper
+      - name: Verify and Repair Gradle Wrapper
         run: |
-          rm -f gradle/wrapper/gradle-wrapper.jar
-          gradle wrapper --gradle-version 9.6.1
+          JAR_PATH="gradle/wrapper/gradle-wrapper.jar"
+          if ! unzip -tq "$JAR_PATH" > /dev/null 2>&1; then
+            echo "Gradle wrapper JAR is corrupted or missing. Regenerating..."
+            rm -f "$JAR_PATH"
+            gradle wrapper --gradle-version 9.6.1
+          else
+            echo "Gradle wrapper JAR integrity verified."
+          fi
           chmod +x gradlew
 
       - name: Compile and Build APK
