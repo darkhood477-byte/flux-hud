@@ -37,6 +37,9 @@ jobs:
           fi
           chmod +x gradlew
 
+      - name: Decode Debug Keystore
+        run: base64 -d debug.keystore.base64 > debug.keystore
+
       - name: Compile and Build APK
         run: ./gradlew assembleDebug
 
