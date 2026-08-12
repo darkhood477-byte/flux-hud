@@ -46,13 +46,6 @@ android {
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
       signingConfig = signingConfigs.getByName("release")
     }
-    debug { 
-      signingConfig = if (file("${rootDir}/debug.keystore").exists()) {
-        signingConfigs.getByName("debugConfig")
-      } else {
-        signingConfigs.getByName("debug")
-      }
-    }
   }
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
